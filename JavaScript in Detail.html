@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>JS</title>
+
+</head>
+
+<body>
+<p id="number_result"></p>
+<p id="string_result"></p>
+<p id="error_message"></p>
+
+    <script>
+var x=70;
+var y=90;
+document.getElementById("number_result").innerHTML=x+y;
+    document.getElementById("string_result").innerHTML =String(x)+String(y);
+    // error handling
+    function divide(a,b) {
+        try{
+            if (b===0)
+        {
+            throw "can't divide by zero";
+            document.write("result : " , a/b);   
+        }
+        }catch (error){
+            document.write("provide non divisor ");
+        }
+    }
+    divide(2,0);
+    try {
+        addalert("welcome guest ");
+
+    }
+    catch(error){
+        document.getElementById("error_message").innerHTML=error
+    }
+    function add(a,b){
+        return a+b;
+    }
+    result=add(23,6);
+    document.write(result);
+    //arrow function
+    add=(a,b) => a+b;
+    document.write(add(100,200));
+    </script>
+
+</body>
+
+</html>
